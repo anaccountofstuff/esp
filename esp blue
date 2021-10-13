@@ -6,7 +6,7 @@ local settings_tbl = {
     ESP_Enabled = true,
     ESP_TeamCheck = false,
     Chams = true,
-    Chams_Color = Color3.fromRGB(0,0,255)
+    Chams_Color = Color3.fromRGB(0,0,255),
     Chams_Transparency = 0.1,
     Chams_Glow_Color = Color3.fromRGB(255,0,0)
 }
@@ -52,7 +52,7 @@ dwRunService.Heartbeat:Connect(function()
 
                             if b:IsA("BasePart") and 
                             b.Transparency ~= 1 then
-                                
+
                                 if settings_tbl.Chams then
 
                                     if not b:FindFirstChild("Glow") and
@@ -82,7 +82,7 @@ dwRunService.Heartbeat:Connect(function()
                                     destroy_chams(char)
 
                                 end
-                            
+
                             end
 
                         end
@@ -114,7 +114,7 @@ dwRunService.Heartbeat:Connect(function()
             v.Character:FindFirstChild("HumanoidRootPart") and 
             v.Character:FindFirstChild("Humanoid") and 
             v.Character:FindFirstChild("Humanoid").Health ~= 0 then
-                
+
                 destroy_chams(v.Character)
 
             end
